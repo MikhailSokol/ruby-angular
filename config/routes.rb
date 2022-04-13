@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'static/index'
+
   
   post "/todos", to: "todos#create"
   get "/projects", to: "projects#index"
