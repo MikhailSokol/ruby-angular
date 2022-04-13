@@ -15,7 +15,7 @@ export class ModalformService implements OnInit{
   public todos:Todo[]=[]
   size = 400
   fetch ():Observable<Todo[]>{
-      return this.http.get<Todo[]>('http://localhost:3000/projects')
+      return this.http.get<Todo[]>('https://angular-rails-todo-app.herokuapp.com/projects')
          .pipe(tap((todos)=>{
            this.todos=todos
           }))
