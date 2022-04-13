@@ -28,7 +28,7 @@ export class ModalformService implements OnInit{
         isCompleted:!targetText.isCompleted,
         isChecked:targetText.isChecked
       }
-      return this.http.patch(`http://localhost:3000/projects/${idCat}/todo/${idText}`,body).subscribe((data:any={})=>{
+      return this.http.patch(`https://angular-rails-todo-app.herokuapp.com/${idCat}/todo/${idText}`,body).subscribe((data:any={})=>{
          this.todos.map((el)=>{
           if(el.id === idCat){
             el.todos.map((elem)=>{

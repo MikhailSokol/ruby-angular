@@ -39,7 +39,7 @@ export class ModalFormComponent implements OnInit {
       text:this.text,
       title:this.category
    }
-    this.http.post('http://localhost:3000/todos',body).subscribe((res)=> {
+    this.http.post('https://angular-rails-todo-app.herokuapp.com/todos',body).subscribe((res)=> {
       this.obj = res
       this.TodoServices.todos.push(this.obj)
       this.TodoServices.checkingLengthOfArrayTodo()
@@ -49,7 +49,7 @@ export class ModalFormComponent implements OnInit {
       text:this.text,
       title:this.categoryTitle
    }
-    this.http.post('http://localhost:3000/todos',body).subscribe((res:any={})=>{
+    this.http.post('https://angular-rails-todo-app.herokuapp.com/todos',body).subscribe((res:any={})=>{
      this.obj = res ;
       this.TodoServices.todos.map((el)=>{
         if(el.id === res.category_id){
