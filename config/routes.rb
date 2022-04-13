@@ -1,0 +1,11 @@
+Rails.application.routes.draw do
+  get 'static/index'
+  get "/" , to: redirect('/projects')
+  post "/todos", to: "todos#create"
+  get "/projects", to: "projects#index"
+  patch "/projects/:id/todo/:id", to: "projects#update"
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get '*other', to: 'static#index'
+  # Defines the root path route ("/")
+  # root "articles#index"
+end
